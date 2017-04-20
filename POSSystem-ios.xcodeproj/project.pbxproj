@@ -1,0 +1,645 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4CB629D91EA3894500DB1CE6 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CB629D81EA3894500DB1CE6 /* AVKit.framework */; };
+		4CB629DB1EA3895A00DB1CE6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CB629DA1EA3895A00DB1CE6 /* AVFoundation.framework */; };
+		4CB629DD1EA3896600DB1CE6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CB629DC1EA3896600DB1CE6 /* CoreGraphics.framework */; };
+		4CEEBA231EA0AF2A00D12DAC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CEEBA221EA0AF2A00D12DAC /* main.m */; };
+		4CEEBA261EA0AF2A00D12DAC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CEEBA251EA0AF2A00D12DAC /* AppDelegate.m */; };
+		4CEEBA291EA0AF2A00D12DAC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CEEBA281EA0AF2A00D12DAC /* ViewController.m */; };
+		4CEEBA2C1EA0AF2A00D12DAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CEEBA2A1EA0AF2A00D12DAC /* Main.storyboard */; };
+		4CEEBA2F1EA0AF2A00D12DAC /* POSSystem_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4CEEBA2D1EA0AF2A00D12DAC /* POSSystem_ios.xcdatamodeld */; };
+		4CEEBA311EA0AF2A00D12DAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CEEBA301EA0AF2A00D12DAC /* Assets.xcassets */; };
+		4CEEBA341EA0AF2A00D12DAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CEEBA321EA0AF2A00D12DAC /* LaunchScreen.storyboard */; };
+		4CEEBA3F1EA0AF2A00D12DAC /* POSSystem_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CEEBA3E1EA0AF2A00D12DAC /* POSSystem_iosTests.m */; };
+		4CEEBA4A1EA0AF2A00D12DAC /* POSSystem_iosUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CEEBA491EA0AF2A00D12DAC /* POSSystem_iosUITests.m */; };
+		4CEEBA591EA0AFD200D12DAC /* MenuItemsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CEEBA581EA0AFD200D12DAC /* MenuItemsCell.m */; };
+		4CEEBA6C1EA0E73500D12DAC /* libJSONModel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CEEBA6B1EA0E73500D12DAC /* libJSONModel.a */; };
+		4CEEBA721EA0E94300D12DAC /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CEEBA711EA0E94300D12DAC /* Product.m */; };
+		4CF086FD1EA4E65800197C19 /* ProductDescriptionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF086FC1EA4E65800197C19 /* ProductDescriptionCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4CEEBA3B1EA0AF2A00D12DAC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4CEEBA161EA0AF2A00D12DAC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4CEEBA1D1EA0AF2A00D12DAC;
+			remoteInfo = "POSSystem-ios";
+		};
+		4CEEBA461EA0AF2A00D12DAC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4CEEBA161EA0AF2A00D12DAC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4CEEBA1D1EA0AF2A00D12DAC;
+			remoteInfo = "POSSystem-ios";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4CB629D81EA3894500DB1CE6 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		4CB629DA1EA3895A00DB1CE6 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		4CB629DC1EA3896600DB1CE6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4CEEBA1E1EA0AF2A00D12DAC /* POSSystem-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "POSSystem-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CEEBA221EA0AF2A00D12DAC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4CEEBA241EA0AF2A00D12DAC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4CEEBA251EA0AF2A00D12DAC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4CEEBA271EA0AF2A00D12DAC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4CEEBA281EA0AF2A00D12DAC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4CEEBA2B1EA0AF2A00D12DAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4CEEBA2E1EA0AF2A00D12DAC /* POSSystem_ios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = POSSystem_ios.xcdatamodel; sourceTree = "<group>"; };
+		4CEEBA301EA0AF2A00D12DAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4CEEBA331EA0AF2A00D12DAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4CEEBA351EA0AF2A00D12DAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CEEBA3A1EA0AF2A00D12DAC /* POSSystem-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "POSSystem-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CEEBA3E1EA0AF2A00D12DAC /* POSSystem_iosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = POSSystem_iosTests.m; sourceTree = "<group>"; };
+		4CEEBA401EA0AF2A00D12DAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CEEBA451EA0AF2A00D12DAC /* POSSystem-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "POSSystem-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CEEBA491EA0AF2A00D12DAC /* POSSystem_iosUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = POSSystem_iosUITests.m; sourceTree = "<group>"; };
+		4CEEBA4B1EA0AF2A00D12DAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CEEBA571EA0AFD200D12DAC /* MenuItemsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuItemsCell.h; sourceTree = "<group>"; };
+		4CEEBA581EA0AFD200D12DAC /* MenuItemsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuItemsCell.m; sourceTree = "<group>"; };
+		4CEEBA601EA0E73500D12DAC /* JSONAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONAPI.h; sourceTree = "<group>"; };
+		4CEEBA611EA0E73500D12DAC /* JSONHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONHTTPClient.h; sourceTree = "<group>"; };
+		4CEEBA621EA0E73500D12DAC /* JSONKeyMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKeyMapper.h; sourceTree = "<group>"; };
+		4CEEBA631EA0E73500D12DAC /* JSONModel+networking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSONModel+networking.h"; sourceTree = "<group>"; };
+		4CEEBA641EA0E73500D12DAC /* JSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModel.h; sourceTree = "<group>"; };
+		4CEEBA651EA0E73500D12DAC /* JSONModelArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelArray.h; sourceTree = "<group>"; };
+		4CEEBA661EA0E73500D12DAC /* JSONModelClassProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelClassProperty.h; sourceTree = "<group>"; };
+		4CEEBA671EA0E73500D12DAC /* JSONModelError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelError.h; sourceTree = "<group>"; };
+		4CEEBA681EA0E73500D12DAC /* JSONModelLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelLib.h; sourceTree = "<group>"; };
+		4CEEBA691EA0E73500D12DAC /* JSONValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONValueTransformer.h; sourceTree = "<group>"; };
+		4CEEBA6A1EA0E73500D12DAC /* NSArray+JSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+JSONModel.h"; sourceTree = "<group>"; };
+		4CEEBA6B1EA0E73500D12DAC /* libJSONModel.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libJSONModel.a; sourceTree = "<group>"; };
+		4CEEBA701EA0E94300D12DAC /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Product.h; path = include/Product.h; sourceTree = "<group>"; };
+		4CEEBA711EA0E94300D12DAC /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Product.m; path = include/Product.m; sourceTree = "<group>"; };
+		4CF086FB1EA4E65800197C19 /* ProductDescriptionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductDescriptionCell.h; sourceTree = "<group>"; };
+		4CF086FC1EA4E65800197C19 /* ProductDescriptionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductDescriptionCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4CEEBA1B1EA0AF2A00D12DAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CB629DD1EA3896600DB1CE6 /* CoreGraphics.framework in Frameworks */,
+				4CB629DB1EA3895A00DB1CE6 /* AVFoundation.framework in Frameworks */,
+				4CB629D91EA3894500DB1CE6 /* AVKit.framework in Frameworks */,
+				4CEEBA6C1EA0E73500D12DAC /* libJSONModel.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CEEBA371EA0AF2A00D12DAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CEEBA421EA0AF2A00D12DAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4CB629D71EA3894500DB1CE6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4CB629DC1EA3896600DB1CE6 /* CoreGraphics.framework */,
+				4CB629DA1EA3895A00DB1CE6 /* AVFoundation.framework */,
+				4CB629D81EA3894500DB1CE6 /* AVKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4CEEBA151EA0AF2A00D12DAC = {
+			isa = PBXGroup;
+			children = (
+				4CEEBA5B1EA0D2D800D12DAC /* model */,
+				4CEEBA201EA0AF2A00D12DAC /* POSSystem-ios */,
+				4CEEBA3D1EA0AF2A00D12DAC /* POSSystem-iosTests */,
+				4CEEBA481EA0AF2A00D12DAC /* POSSystem-iosUITests */,
+				4CEEBA1F1EA0AF2A00D12DAC /* Products */,
+				4CB629D71EA3894500DB1CE6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4CEEBA1F1EA0AF2A00D12DAC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4CEEBA1E1EA0AF2A00D12DAC /* POSSystem-ios.app */,
+				4CEEBA3A1EA0AF2A00D12DAC /* POSSystem-iosTests.xctest */,
+				4CEEBA451EA0AF2A00D12DAC /* POSSystem-iosUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4CEEBA201EA0AF2A00D12DAC /* POSSystem-ios */ = {
+			isa = PBXGroup;
+			children = (
+				4CEEBA241EA0AF2A00D12DAC /* AppDelegate.h */,
+				4CEEBA251EA0AF2A00D12DAC /* AppDelegate.m */,
+				4CEEBA271EA0AF2A00D12DAC /* ViewController.h */,
+				4CEEBA281EA0AF2A00D12DAC /* ViewController.m */,
+				4CEEBA571EA0AFD200D12DAC /* MenuItemsCell.h */,
+				4CEEBA581EA0AFD200D12DAC /* MenuItemsCell.m */,
+				4CF086FB1EA4E65800197C19 /* ProductDescriptionCell.h */,
+				4CF086FC1EA4E65800197C19 /* ProductDescriptionCell.m */,
+				4CEEBA301EA0AF2A00D12DAC /* Assets.xcassets */,
+				4CEEBA2A1EA0AF2A00D12DAC /* Main.storyboard */,
+				4CEEBA321EA0AF2A00D12DAC /* LaunchScreen.storyboard */,
+				4CEEBA351EA0AF2A00D12DAC /* Info.plist */,
+				4CEEBA2D1EA0AF2A00D12DAC /* POSSystem_ios.xcdatamodeld */,
+				4CEEBA211EA0AF2A00D12DAC /* Supporting Files */,
+			);
+			path = "POSSystem-ios";
+			sourceTree = "<group>";
+		};
+		4CEEBA211EA0AF2A00D12DAC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4CEEBA221EA0AF2A00D12DAC /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4CEEBA3D1EA0AF2A00D12DAC /* POSSystem-iosTests */ = {
+			isa = PBXGroup;
+			children = (
+				4CEEBA3E1EA0AF2A00D12DAC /* POSSystem_iosTests.m */,
+				4CEEBA401EA0AF2A00D12DAC /* Info.plist */,
+			);
+			path = "POSSystem-iosTests";
+			sourceTree = "<group>";
+		};
+		4CEEBA481EA0AF2A00D12DAC /* POSSystem-iosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4CEEBA491EA0AF2A00D12DAC /* POSSystem_iosUITests.m */,
+				4CEEBA4B1EA0AF2A00D12DAC /* Info.plist */,
+			);
+			path = "POSSystem-iosUITests";
+			sourceTree = "<group>";
+		};
+		4CEEBA5B1EA0D2D800D12DAC /* model */ = {
+			isa = PBXGroup;
+			children = (
+				4CEEBA701EA0E94300D12DAC /* Product.h */,
+				4CEEBA711EA0E94300D12DAC /* Product.m */,
+				4CEEBA5F1EA0E73500D12DAC /* include */,
+				4CEEBA6B1EA0E73500D12DAC /* libJSONModel.a */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		4CEEBA5F1EA0E73500D12DAC /* include */ = {
+			isa = PBXGroup;
+			children = (
+				4CEEBA601EA0E73500D12DAC /* JSONAPI.h */,
+				4CEEBA611EA0E73500D12DAC /* JSONHTTPClient.h */,
+				4CEEBA621EA0E73500D12DAC /* JSONKeyMapper.h */,
+				4CEEBA631EA0E73500D12DAC /* JSONModel+networking.h */,
+				4CEEBA641EA0E73500D12DAC /* JSONModel.h */,
+				4CEEBA651EA0E73500D12DAC /* JSONModelArray.h */,
+				4CEEBA661EA0E73500D12DAC /* JSONModelClassProperty.h */,
+				4CEEBA671EA0E73500D12DAC /* JSONModelError.h */,
+				4CEEBA681EA0E73500D12DAC /* JSONModelLib.h */,
+				4CEEBA691EA0E73500D12DAC /* JSONValueTransformer.h */,
+				4CEEBA6A1EA0E73500D12DAC /* NSArray+JSONModel.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4CEEBA1D1EA0AF2A00D12DAC /* POSSystem-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CEEBA4E1EA0AF2A00D12DAC /* Build configuration list for PBXNativeTarget "POSSystem-ios" */;
+			buildPhases = (
+				4CEEBA1A1EA0AF2A00D12DAC /* Sources */,
+				4CEEBA1B1EA0AF2A00D12DAC /* Frameworks */,
+				4CEEBA1C1EA0AF2A00D12DAC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "POSSystem-ios";
+			productName = "POSSystem-ios";
+			productReference = 4CEEBA1E1EA0AF2A00D12DAC /* POSSystem-ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4CEEBA391EA0AF2A00D12DAC /* POSSystem-iosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CEEBA511EA0AF2A00D12DAC /* Build configuration list for PBXNativeTarget "POSSystem-iosTests" */;
+			buildPhases = (
+				4CEEBA361EA0AF2A00D12DAC /* Sources */,
+				4CEEBA371EA0AF2A00D12DAC /* Frameworks */,
+				4CEEBA381EA0AF2A00D12DAC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4CEEBA3C1EA0AF2A00D12DAC /* PBXTargetDependency */,
+			);
+			name = "POSSystem-iosTests";
+			productName = "POSSystem-iosTests";
+			productReference = 4CEEBA3A1EA0AF2A00D12DAC /* POSSystem-iosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4CEEBA441EA0AF2A00D12DAC /* POSSystem-iosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CEEBA541EA0AF2A00D12DAC /* Build configuration list for PBXNativeTarget "POSSystem-iosUITests" */;
+			buildPhases = (
+				4CEEBA411EA0AF2A00D12DAC /* Sources */,
+				4CEEBA421EA0AF2A00D12DAC /* Frameworks */,
+				4CEEBA431EA0AF2A00D12DAC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4CEEBA471EA0AF2A00D12DAC /* PBXTargetDependency */,
+			);
+			name = "POSSystem-iosUITests";
+			productName = "POSSystem-iosUITests";
+			productReference = 4CEEBA451EA0AF2A00D12DAC /* POSSystem-iosUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4CEEBA161EA0AF2A00D12DAC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Hemant Saini";
+				TargetAttributes = {
+					4CEEBA1D1EA0AF2A00D12DAC = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = C2F8LV747S;
+						ProvisioningStyle = Automatic;
+					};
+					4CEEBA391EA0AF2A00D12DAC = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 4CEEBA1D1EA0AF2A00D12DAC;
+					};
+					4CEEBA441EA0AF2A00D12DAC = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 4CEEBA1D1EA0AF2A00D12DAC;
+					};
+				};
+			};
+			buildConfigurationList = 4CEEBA191EA0AF2A00D12DAC /* Build configuration list for PBXProject "POSSystem-ios" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4CEEBA151EA0AF2A00D12DAC;
+			productRefGroup = 4CEEBA1F1EA0AF2A00D12DAC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4CEEBA1D1EA0AF2A00D12DAC /* POSSystem-ios */,
+				4CEEBA391EA0AF2A00D12DAC /* POSSystem-iosTests */,
+				4CEEBA441EA0AF2A00D12DAC /* POSSystem-iosUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4CEEBA1C1EA0AF2A00D12DAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CEEBA341EA0AF2A00D12DAC /* LaunchScreen.storyboard in Resources */,
+				4CEEBA311EA0AF2A00D12DAC /* Assets.xcassets in Resources */,
+				4CEEBA2C1EA0AF2A00D12DAC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CEEBA381EA0AF2A00D12DAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CEEBA431EA0AF2A00D12DAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4CEEBA1A1EA0AF2A00D12DAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CF086FD1EA4E65800197C19 /* ProductDescriptionCell.m in Sources */,
+				4CEEBA721EA0E94300D12DAC /* Product.m in Sources */,
+				4CEEBA291EA0AF2A00D12DAC /* ViewController.m in Sources */,
+				4CEEBA261EA0AF2A00D12DAC /* AppDelegate.m in Sources */,
+				4CEEBA231EA0AF2A00D12DAC /* main.m in Sources */,
+				4CEEBA2F1EA0AF2A00D12DAC /* POSSystem_ios.xcdatamodeld in Sources */,
+				4CEEBA591EA0AFD200D12DAC /* MenuItemsCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CEEBA361EA0AF2A00D12DAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CEEBA3F1EA0AF2A00D12DAC /* POSSystem_iosTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CEEBA411EA0AF2A00D12DAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CEEBA4A1EA0AF2A00D12DAC /* POSSystem_iosUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4CEEBA3C1EA0AF2A00D12DAC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4CEEBA1D1EA0AF2A00D12DAC /* POSSystem-ios */;
+			targetProxy = 4CEEBA3B1EA0AF2A00D12DAC /* PBXContainerItemProxy */;
+		};
+		4CEEBA471EA0AF2A00D12DAC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4CEEBA1D1EA0AF2A00D12DAC /* POSSystem-ios */;
+			targetProxy = 4CEEBA461EA0AF2A00D12DAC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4CEEBA2A1EA0AF2A00D12DAC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4CEEBA2B1EA0AF2A00D12DAC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4CEEBA321EA0AF2A00D12DAC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4CEEBA331EA0AF2A00D12DAC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4CEEBA4C1EA0AF2A00D12DAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		4CEEBA4D1EA0AF2A00D12DAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4CEEBA4F1EA0AF2A00D12DAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = C2F8LV747S;
+				INFOPLIST_FILE = "POSSystem-ios/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = punchh.QRCodeReader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		4CEEBA501EA0AF2A00D12DAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = C2F8LV747S;
+				INFOPLIST_FILE = "POSSystem-ios/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = punchh.QRCodeReader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+		4CEEBA521EA0AF2A00D12DAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "POSSystem-iosTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "punchh.POSSystem-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/POSSystem-ios.app/POSSystem-ios";
+			};
+			name = Debug;
+		};
+		4CEEBA531EA0AF2A00D12DAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "POSSystem-iosTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "punchh.POSSystem-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/POSSystem-ios.app/POSSystem-ios";
+			};
+			name = Release;
+		};
+		4CEEBA551EA0AF2A00D12DAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "POSSystem-iosUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "punchh.POSSystem-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "POSSystem-ios";
+			};
+			name = Debug;
+		};
+		4CEEBA561EA0AF2A00D12DAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "POSSystem-iosUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "punchh.POSSystem-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "POSSystem-ios";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4CEEBA191EA0AF2A00D12DAC /* Build configuration list for PBXProject "POSSystem-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CEEBA4C1EA0AF2A00D12DAC /* Debug */,
+				4CEEBA4D1EA0AF2A00D12DAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4CEEBA4E1EA0AF2A00D12DAC /* Build configuration list for PBXNativeTarget "POSSystem-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CEEBA4F1EA0AF2A00D12DAC /* Debug */,
+				4CEEBA501EA0AF2A00D12DAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4CEEBA511EA0AF2A00D12DAC /* Build configuration list for PBXNativeTarget "POSSystem-iosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CEEBA521EA0AF2A00D12DAC /* Debug */,
+				4CEEBA531EA0AF2A00D12DAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4CEEBA541EA0AF2A00D12DAC /* Build configuration list for PBXNativeTarget "POSSystem-iosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CEEBA551EA0AF2A00D12DAC /* Debug */,
+				4CEEBA561EA0AF2A00D12DAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4CEEBA2D1EA0AF2A00D12DAC /* POSSystem_ios.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4CEEBA2E1EA0AF2A00D12DAC /* POSSystem_ios.xcdatamodel */,
+			);
+			currentVersion = 4CEEBA2E1EA0AF2A00D12DAC /* POSSystem_ios.xcdatamodel */;
+			path = POSSystem_ios.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 4CEEBA161EA0AF2A00D12DAC /* Project object */;
+}
