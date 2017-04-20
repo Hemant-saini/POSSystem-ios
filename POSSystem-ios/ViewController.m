@@ -14,6 +14,8 @@
 #import <AVFoundation/AVFoundation.h>
 
 @interface ViewController () <AVCaptureMetadataOutputObjectsDelegate,UITableViewDelegate,UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UILabel *lbltax;
+@property (weak, nonatomic) IBOutlet UILabel *lblTotals;
 @property (nonatomic) BOOL isReading;
 @property (nonatomic, strong) AVCaptureSession *captureSession;
 @property (nonatomic, strong) AVCaptureVideoPreviewLayer *videoPreviewLayer;
@@ -88,7 +90,6 @@
             cell = [[MenuItemsCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
         }
         cell.textLabel.text = [NSString stringWithFormat:@"%@ %@",[[arrMenu objectAtIndex:indexPath.row] valueForKey:@"name"],[[arrMenu objectAtIndex:indexPath.row] valueForKey:@"rate"]];
-        
         return cell;
         
     } else {
@@ -99,50 +100,57 @@
             cell = [[ProductDescriptionCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
         }
         cell.descriptionLabel.text = [NSString stringWithFormat:@"%@ %@",[[arrProduct objectAtIndex:indexPath.row] valueForKey:@"name"],[[arrProduct objectAtIndex:indexPath.row] valueForKey:@"rate"]];
-        cell.subTotalLabel.text = [NSString stringWithFormat:@"%@",[[arrProduct objectAtIndex:indexPath.row] valueForKey:@"total"]];
-        cell.taxLabel.text = [NSString stringWithFormat:@"%@",[[arrProduct objectAtIndex:indexPath.row] valueForKey:@"tax"]];
-        cell.totalLabel.text = [NSString stringWithFormat:@"%@",[[arrProduct objectAtIndex:indexPath.row] valueForKey:@"totalAfterTax"]];
+        cell.subTotalLabel.text = [NSString stringWithFormat:@"Quantity = %@",[[arrProduct objectAtIndex:indexPath.row] valueForKey:@"quantity"]];
         return cell;
     }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (tableView == _menuTabel) {
-            for (int i =0; i<arrProduct.count; i++) {
-                if ([[[arrProduct objectAtIndex:i] valueForKey:@"id"] isEqualToString:[[arrMenu objectAtIndex:indexPath.row] valueForKey:@"id"]]) {
-                    NSInteger productQauntity = [[[arrProduct objectAtIndex:i] valueForKey:@"quantity"] integerValue];
-                    id objectAtSelectedIndex = [arrMenu objectAtIndex:indexPath.row];
-                    productQauntity+=1;
-                    NSInteger total = [[[objectAtSelectedIndex valueForKey:@"rate"] stringByReplacingOccurrencesOfString:@"$" withString:@""] integerValue] * productQauntity;
-                    NSInteger totalAfterTax =  ([[[objectAtSelectedIndex valueForKey:@"rate"] stringByReplacingOccurrencesOfString:@"$" withString:@""] integerValue] * total) / 100 + total;
-                    [arrProduct removeObjectAtIndex:i];
-                    [arrProduct insertObject:[NSDictionary dictionaryWithObjectsAndKeys:[objectAtSelectedIndex valueForKey:@"name"],@"name",[objectAtSelectedIndex valueForKey:@"rate"],@"rate",[objectAtSelectedIndex valueForKey:@"tax"],@"tax",[ NSNumber numberWithInteger: total],@"total",[NSNumber numberWithInteger:totalAfterTax],@"totalAfterTax",[objectAtSelectedIndex valueForKey:@"id"],@"id",[NSNumber numberWithInteger:productQauntity],@"quantity", nil] atIndex:i];
-                    break;
-                    //  [arrProduct addObject:[NSDictionary dictionaryWithObjectsAndKeys:<#(nonnull id), ...#>, nil]]
-                } else {
-                    NSInteger productQauntity = 1;
-                    id objectAtSelectedIndex = [arrMenu objectAtIndex:indexPath.row];
-                    NSInteger total = [[[objectAtSelectedIndex valueForKey:@"rate"] stringByReplacingOccurrencesOfString:@"$" withString:@""] integerValue] * productQauntity;
-                    NSInteger totalAfterTax =  ([[[objectAtSelectedIndex valueForKey:@"rate"] stringByReplacingOccurrencesOfString:@"$" withString:@""] integerValue] * total) / 100 + total;
-                    [arrProduct addObject:[NSDictionary dictionaryWithObjectsAndKeys:[objectAtSelectedIndex valueForKey:@"name"],@"name",[objectAtSelectedIndex valueForKey:@"rate"],@"rate",[objectAtSelectedIndex valueForKey:@"tax"],@"tax",[ NSNumber numberWithInteger: total],@"total",[NSNumber numberWithInteger:totalAfterTax],@"totalAfterTax",[objectAtSelectedIndex valueForKey:@"id"],@"id",[NSNumber numberWithInteger:productQauntity],@"quantity", nil]];
-                    
-                }
-        
-    }
-        if (!(arrProduct.count > 0)) {
-            NSInteger productQauntity = 1;
-            id objectAtSelectedIndex = [arrMenu objectAtIndex:indexPath.row];
-            NSInteger total = [[[objectAtSelectedIndex valueForKey:@"rate"] stringByReplacingOccurrencesOfString:@"$" withString:@""] integerValue] * productQauntity;
-            NSInteger totalAfterTax =  ([[[objectAtSelectedIndex valueForKey:@"rate"] stringByReplacingOccurrencesOfString:@"$" withString:@""] integerValue] * total) / 100 + total;
-            [arrProduct addObject:[NSDictionary dictionaryWithObjectsAndKeys:[objectAtSelectedIndex valueForKey:@"name"],@"name",[objectAtSelectedIndex valueForKey:@"rate"],@"rate",[objectAtSelectedIndex valueForKey:@"tax"],@"tax",[ NSNumber numberWithInteger: total],@"total",[NSNumber numberWithInteger:totalAfterTax],@"totalAfterTax",[objectAtSelectedIndex valueForKey:@"id"],@"id",[NSNumber numberWithInteger:productQauntity],@"quantity", nil]];
+        for (int i =0; i<arrProduct.count; i++) {
+            if ([[[arrProduct objectAtIndex:i] valueForKey:@"id"] isEqualToString:[[arrMenu objectAtIndex:indexPath.row] valueForKey:@"id"]]) {
+                float productQauntity = [[[arrProduct objectAtIndex:i] valueForKey:@"quantity"] floatValue];
+                id objectAtSelectedIndex = [arrMenu objectAtIndex:indexPath.row];
+                productQauntity+=1;
+                float total = [[[objectAtSelectedIndex valueForKey:@"rate"] stringByReplacingOccurrencesOfString:@"$" withString:@""]floatValue] * productQauntity;
+                float totalAfterTax =  ([[[objectAtSelectedIndex valueForKey:@"rate"] stringByReplacingOccurrencesOfString:@"$" withString:@""] floatValue] * total) / 100+ total;
+                [arrProduct removeObjectAtIndex:i];
+                [arrProduct insertObject:[NSDictionary dictionaryWithObjectsAndKeys:[objectAtSelectedIndex valueForKey:@"name"],@"name",[objectAtSelectedIndex valueForKey:@"rate"],@"rate",[objectAtSelectedIndex valueForKey:@"tax"],@"tax",[ NSNumber numberWithInteger: total],@"total",[NSNumber numberWithFloat:totalAfterTax],@"totalAfterTax",[objectAtSelectedIndex valueForKey:@"id"],@"id",[NSNumber numberWithInteger:productQauntity],@"quantity", nil] atIndex:i];
+                [tableView deselectRowAtIndexPath:indexPath animated:YES];
+                [_productTabel reloadData];
+                [self calculateAndDisplayTotals];
+                [self calculateAndDisplayTotals];
+                [self calculateAndDisplayTax];
+                [self calculateAndDisplayTax];
+
+                return;
+                
+            }
         }
+        float productQauntity = 1;
+        id objectAtSelectedIndex = [arrMenu objectAtIndex:indexPath.row];
+        float total = [[[objectAtSelectedIndex valueForKey:@"rate"] stringByReplacingOccurrencesOfString:@"$" withString:@""] floatValue] * productQauntity;
+        float totalAfterTax =  (([[[objectAtSelectedIndex valueForKey:@"rate"] stringByReplacingOccurrencesOfString:@"$" withString:@""] floatValue] * total) / 100.00) + total;
+        [arrProduct addObject:[NSDictionary dictionaryWithObjectsAndKeys:[objectAtSelectedIndex valueForKey:@"name"],@"name",[objectAtSelectedIndex valueForKey:@"rate"],@"rate",[objectAtSelectedIndex valueForKey:@"tax"],@"tax",[ NSNumber numberWithFloat: total],@"total",[NSNumber numberWithFloat:totalAfterTax],@"totalAfterTax",[objectAtSelectedIndex valueForKey:@"id"],@"id",[NSNumber numberWithInteger:productQauntity],@"quantity", nil]];
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
         [_productTabel reloadData];
+        [self calculateAndDisplayTotals];
+        [self calculateAndDisplayTax];
 
-       // }
     }
 }
 
+- (void)calculateAndDisplayTotals {
+    float total = 0;
+    for (int i = 0; i < arrProduct.count; i++) {
+        total = total + [[[arrProduct objectAtIndex:i] valueForKey:@"totalAfterTax"] floatValue];
+    }
+    self.lblTotals.text = [NSString stringWithFormat:@"Total = $%.02f",total];
+}
+
+- (void)calculateAndDisplayTax {
+
+}
 
 #pragma mark - Camera scanning
 - (IBAction)startScanningButton:(id)sender {
